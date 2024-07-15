@@ -1,0 +1,157 @@
+
+
+::selection {
+  background-color: #9e1437;
+  color: #fff;
+}
+
+.hide {
+  display: none !important;
+}
+
+// ---font
+
+// @mixin ftRegular {
+//   font-family: "NotoSansR";
+//   font-weight: normal;
+// }
+// @mixin ftLight {
+//   font-family: "NotoSansL";
+// }
+// @mixin ftMedium {
+//   font-family: "NotoSansM";
+// }
+// @mixin ftBold {
+//   font-family: "NotoSansB";
+// }
+// @mixin ftBlack {
+//   font-family: "NotoSansBL";
+// }
+
+// ---
+
+@mixin fullvh() {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+@mixin full2vh() {
+  height: 200vh;
+  height: calc(var(--vh, 1vh) * 200);
+}
+
+@mixin txtellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+}
+@mixin txtellipsisMulti($h: 2.4rem, $lh: 1.2rem, $l: 2) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $l;
+  /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+  line-height: $lh;
+  height: $h;
+}
+@mixin clear() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin customScroll(
+  $w: 5px,
+  $h: 5px,
+  $barcolor: #d8dcec,
+  $bgrcolor: transparent
+) {
+  overflow: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: $w;
+    height: $h;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $barcolor;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $bgrcolor;
+    border-radius: 5px;
+  }
+}
+
+//animation
+@keyframes ani-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ani-float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes ani-width {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes ani-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes ani-left {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0%;
+    opacity: 1;
+  }
+}
+@keyframes ani-fadein {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes ani-fadein2 {
+  0% {
+    transform: translate(-50%, -30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+

@@ -1,0 +1,264 @@
+@charset 'utf-8';
+/*---------------------------------
+    File   : reset.scss
+    Date   : 2024.07.15
+/*---------------------------------*/
+
+
+
+//--------------NotoSans
+
+// @font-face {
+//   font-family: "NotoSansL";
+//   src: url("../font/notokr-light.eot");
+//   /* IE9 Compat Modes */
+//   src: url("../font/notokr-light.eot?#iefix") format("embedded-opentype"),
+//     url("../font/notokr-light.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "NotoSansR";
+//   src: url("../font/notokr-regular.eot");
+//   /* IE9 Compat Modes */
+//   src: url("../font/notokr-regular.eot?#iefix") format("embedded-opentype"),
+//     url("../font/notokr-regular.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "NotoSansM";
+//   src: url("../font/notokr-medium.eot");
+//   /* IE9 Compat Modes */
+//   src: url("../font/notokr-medium.eot?#iefix") format("embedded-opentype"),
+//     url("../font/notokr-medium.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "NotoSansB";
+//   src: url("../font/notokr-bold.eot");
+//   /* IE9 Compat Modes */
+//   src: url("../font/notokr-bold.eot?#iefix") format("embedded-opentype"),
+//     url("../font/notokr-bold.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "NotoSansBL";
+//   src: url("../font/notokr-black.eot");
+//   /* IE9 Compat Modes */
+//   src: url("../font/notokr-black.eot?#iefix") format("embedded-opentype"),
+//     url("../font/notokr-black.woff") format("woff");
+// }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+a {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+span {
+  vertical-align: middle;
+}
+
+strong {
+  font-weight: normal;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+  background: #fff;
+
+  &::-ms-clear {
+    display: none;
+  }
+
+ 
+
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-width: 280px;
+  line-height: 1;
+  word-break: break-word;
+  -webkit-overflow-scrolling: touch;
+}
+
+* {
+  ::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+  }
+    font-family: "NotoSansR";
+  transition: 0.4s ease-in-out;
+  font-size: 16px;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+// 반응형시 모바일에서 필요한 코드
+body {
+  touch-action: pan-x pan-y;
+}

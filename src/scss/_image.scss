@@ -1,0 +1,28 @@
+@charset 'utf-8';
+
+/*---------------------------------
+    File   : image.scss
+기본 타입은 png, svg일경우 따로 표기
+/*---------------------------------*/
+
+@mixin image(
+  $folder,
+  $name,
+  $path: "../img/",
+  $format: "png",
+  $bgX: center,
+  $bgY: center
+) {
+  background: url("#{$path}#{$folder}#{$name}.#{$format}") no-repeat;
+  background-position-x: $bgX;
+  background-position-y: $bgY;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*
+logo 
+*/
+@mixin logo() {
+  @include image($folder: "logo", $name: "/logo");
+}

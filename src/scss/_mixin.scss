@@ -1,0 +1,122 @@
+@charset 'utf-8';
+/*---------------------------------
+    File   : mixin.scss
+    Date   : 2023.12.2
+/*---------------------------------*/
+
+/*
+font
+*/
+
+/*
+scroll 
+ */
+// ::-webkit-scrollbar
+@mixin scrollbar($bgColor: $scrollbar) {
+  width: 4px;
+  height: 4px;
+  background: $bgColor;
+}
+
+//::-webkit-scrollbar-thumb
+@mixin scrollbar-thumb($bgColor: $scrollThumb) {
+  height: 15px;
+  background: $bgColor;
+  border-radius: 0px;
+}
+
+/*
+text 
+*/
+/* hide */
+@mixin txtHide {
+  text-indent: -999999px;
+  font-size: 0;
+}
+
+/*
+ellipsis
+*/
+/* hover visible */
+@mixin hoverVisible {
+  white-space: normal !important;
+  overflow: visible !important;
+  word-break: break-all !important;
+}
+
+/* text ellipsis */
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin ellipsis_l4($wlc: 4) {
+  display: -webkit-box;
+  //width: 100px;
+  //height: 100px;
+  //line-height: 22px;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  -webkit-line-clamp: $wlc;
+  -webkit-box-orient: vertical;
+}
+
+/* 
+flex
+*/
+@mixin flex_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex_between_column {
+  @include flex_between;
+  flex-direction: column;
+}
+
+@mixin flex_center_column {
+  @include flex_center;
+  flex-direction: column;
+}
+
+@mixin flex_item_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin flex_end_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@mixin flex_around {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin flex_start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* 
+title 
+*/
+@mixin title($fs: 45px) {
+  @include ftBlack;
+  line-height: 65px;
+  font-size: $fs;
+  color: #fff;
+}
