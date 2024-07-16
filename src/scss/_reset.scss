@@ -4,50 +4,6 @@
     Date   : 2024.07.15
 /*---------------------------------*/
 
-
-
-//--------------NotoSans
-
-// @font-face {
-//   font-family: "NotoSansL";
-//   src: url("../font/notokr-light.eot");
-//   /* IE9 Compat Modes */
-//   src: url("../font/notokr-light.eot?#iefix") format("embedded-opentype"),
-//     url("../font/notokr-light.woff") format("woff");
-// }
-
-// @font-face {
-//   font-family: "NotoSansR";
-//   src: url("../font/notokr-regular.eot");
-//   /* IE9 Compat Modes */
-//   src: url("../font/notokr-regular.eot?#iefix") format("embedded-opentype"),
-//     url("../font/notokr-regular.woff") format("woff");
-// }
-
-// @font-face {
-//   font-family: "NotoSansM";
-//   src: url("../font/notokr-medium.eot");
-//   /* IE9 Compat Modes */
-//   src: url("../font/notokr-medium.eot?#iefix") format("embedded-opentype"),
-//     url("../font/notokr-medium.woff") format("woff");
-// }
-
-// @font-face {
-//   font-family: "NotoSansB";
-//   src: url("../font/notokr-bold.eot");
-//   /* IE9 Compat Modes */
-//   src: url("../font/notokr-bold.eot?#iefix") format("embedded-opentype"),
-//     url("../font/notokr-bold.woff") format("woff");
-// }
-
-// @font-face {
-//   font-family: "NotoSansBL";
-//   src: url("../font/notokr-black.eot");
-//   /* IE9 Compat Modes */
-//   src: url("../font/notokr-black.eot?#iefix") format("embedded-opentype"),
-//     url("../font/notokr-black.woff") format("woff");
-// }
-
 html,
 body,
 div,
@@ -248,7 +204,7 @@ body {
     -ms-overflow-style: none; /* 인터넷 익스플로러 */
     scrollbar-width: none; /* 파이어폭스 */
   }
-    font-family: "NotoSansR";
+    font-family: Pretendard;
   transition: 0.4s ease-in-out;
   font-size: 16px;
 }

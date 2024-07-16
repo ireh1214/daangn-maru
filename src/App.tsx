@@ -1,16 +1,16 @@
 import React from 'react';
 import './scss/common.scss'
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-        프로젝트를 할 시간이 도래했다...
-        </p>
-    
-      </header>
+<Header />
+<main>
+content
+</main>
+<Footer />
     </div>
   );
 }
