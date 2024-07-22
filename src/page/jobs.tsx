@@ -1,5 +1,9 @@
 import Layout from "../components/Layout";
 
 export default function Jobs() {
-  return <div></div>;
+	return (
+		<Layout>
+			<h1>Jobs</h1>
+		</Layout>
+	);
 }

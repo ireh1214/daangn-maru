@@ -1,5 +1,9 @@
 import Layout from "../components/Layout";
 
-export default function realty() {
-  return <div></div>;
+export default function Realty() {
+	return (
+		<Layout>
+			<h1>Realty</h1>
+		</Layout>
+	);
 }

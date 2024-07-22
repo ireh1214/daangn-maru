@@ -1,5 +1,9 @@
 import Layout from "../components/Layout";
 
-export default function nearbyStores() {
-  return <div></div>;
+export default function NearbyStores() {
+	return (
+		<Layout>
+			<h1>Near</h1>
+		</Layout>
+	);
 }
