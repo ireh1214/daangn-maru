@@ -1,5 +1,5 @@
-import React from 'react';
+import Layout from "../components/Layout";
 
-export default function fleamarket() {
-  return <div></div>;
+export default function Fleamarket() {
+  return <div>fleamarket</div>;
 }

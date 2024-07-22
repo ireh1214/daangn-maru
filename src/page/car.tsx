@@ -1,6 +1,6 @@
-import React from 'react';
+import Layout from "../components/Layout";
 
-export default function car() {
+export default function Car() {
   return <div>
   </div>;
 }

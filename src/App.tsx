@@ -1,17 +1,23 @@
-import React from 'react';
+import { Route, Routes } from "react-router-dom";
 import './scss/common.scss'
-import Header from './components/Header';
-import Footer from './components/Footer';
+
+import Home from "./page/Home";
+import Fleamarket from "./page/Fleamarket";
+import NearbyStores from "./page/Nearby-stores";
+import Jobs from "./page/Jobs";
+import Realty from "./page/Realty";
+import Car from "./page/Car";
 
 function App() {
   return (
-    <div className="App">
-<Header />
-<main>
-content
-</main>
-<Footer />
-    </div>
+     <Routes>
+      <Route path ="/" element ={<Home />} />
+      <Route path ="/fleamarket" element ={<Fleamarket />} />
+      <Route path ="/nearbyStores" element ={<NearbyStores />} />
+      <Route path ="/jobs" element ={<Jobs />} />
+      <Route path ="/realty" element ={<Realty />} />
+      <Route path ="/car" element ={<Car />} />
+     </Routes>
   );
 }
 

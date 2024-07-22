@@ -205,6 +205,7 @@ body {
     scrollbar-width: none; /* 파이어폭스 */
   }
     font-family: Pretendard;
+    box-sizing: border-box;
   transition: 0.4s ease-in-out;
   font-size: 16px;
 }
@@ -217,4 +218,9 @@ img {
 // 반응형시 모바일에서 필요한 코드
 body {
   touch-action: pan-x pan-y;
+}
+
+::selection {
+    color: #212529;
+    background: #FFB98B;
 }
