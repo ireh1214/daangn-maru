@@ -1,6 +1,10 @@
+// supabaseClient.ts
+
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = "YOUR_SUPABASE_URL";
-const supabaseAnonKey = "YOUR_SUPABASE_ANON_KEY";
+// Supabase 설정
+const SUPABASE_URL = "https://cpeizpckhxkbfowgkplg.supabase.co";
+// biome-ignore lint/style/noNonNullAssertion: <explanation>
+const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_KEY!;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
