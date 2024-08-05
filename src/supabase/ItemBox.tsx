@@ -1,31 +1,57 @@
-// ItemBox.tsx
-
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "./supabaseClient";
 
+// 데이터 타입 정의
+interface Item {
+	id_: string; // uuid 타입은 string
+	image_url: string;
+	title: string;
+	description: string;
+	location: string;
+	price: number; // bigint는 number
+}
+
 export default function ItemBox() {
-	const [data, setData] = useState<string | null>(null);
+	const [items, setItems] = useState<Item[]>([]);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState<string | null>(null);
 
 	useEffect(() => {
-		// 스토리지에서 데이터를 가져오는 함수
-		const fetchData = async () => {
-			const { data, error } = await supabase.storage
-				.from("your-bucket-name") // 여기에 버킷 이름을 입력하세요
-				.download("path/to/your/file.txt"); // 여기에 파일 경로를 입력하세요
+		// 데이터 가져오는 함수
+		const fetchItems = async () => {
+			const { data, error } = await supabase
+				.from("items") // 테이블 이름 입력
+				.select("*"); // 모든 컬럼 선택
 
-			if (!error && data) {
-				const text = await data.text(); // 파일 데이터를 읽어 문자열로 변환
-				setData(text); // 데이터를 상태에 저장
+			if (error) {
+				console.error("Error fetching data:", error.message); // 오류 메시지 출력
+				setError(error.message); // 오류 메시지 설정
+			} else {
+				console.log("Fetched data:", data); // 가져온 데이터 출력
+				setItems(data as Item[]); // 데이터를 상태에 저장
 			}
+
+			setLoading(false); 
 		};
 
-		fetchData();
+		fetchItems();
 	}, []);
+
+	if (loading) return <div>Loading...</div>;
+	if (error) return <div>Error: {error}</div>;
 
 	return (
 		<div>
-			<h1>Item Data</h1>
-			<div>{data}</div>
+			<h1>Items List</h1>
+			<ul>
+				{items.map((item) => (
+					<li key={item.id_}>
+						<h2>{item.title}</h2>
+						<p>Price: {item.price} 원</p>
+						<p>Location: {item.location}</p>
+					</li>
+				))}
+			</ul>
 		</div>
 	);
 }
