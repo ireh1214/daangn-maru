@@ -17,7 +17,6 @@ export default function ItemBox() {
 	const [error, setError] = useState<string | null>(null);
 
 	useEffect(() => {
-		// 데이터 가져오는 함수
 		const fetchItems = async () => {
 			const { data, error } = await supabase
 				.from("items") // 테이블 이름 입력
@@ -30,8 +29,7 @@ export default function ItemBox() {
 				console.log("Fetched data:", data); // 가져온 데이터 출력
 				setItems(data as Item[]); // 데이터를 상태에 저장
 			}
-
-			setLoading(false); 
+			setLoading(false);
 		};
 
 		fetchItems();
@@ -46,6 +44,7 @@ export default function ItemBox() {
 			<ul>
 				{items.map((item) => (
 					<li key={item.id_}>
+						{/* id는 아직 없다! */}
 						<h2>{item.title}</h2>
 						<p>Price: {item.price} 원</p>
 						<p>Location: {item.location}</p>
