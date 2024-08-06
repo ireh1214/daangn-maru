@@ -39,18 +39,17 @@ export default function ItemBox() {
 	if (error) return <div>Error: {error}</div>;
 
 	return (
-		<div>
-			<h1>Items List</h1>
+		<>
 			<ul>
 				{items.map((item) => (
 					<li key={item.id_}>
-						{/* id는 아직 없다! */}
-						<h2>{item.title}</h2>
-						<p>Price: {item.price} 원</p>
-						<p>Location: {item.location}</p>
+						<img src={item.image_url} alt="" />
+						<h5>{item.title}</h5>
+						<p>{item.price} 원</p>
+						<p>{item.location}</p>
 					</li>
 				))}
 			</ul>
-		</div>
+		</>
 	);
 }
