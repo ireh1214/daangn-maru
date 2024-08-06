@@ -39,20 +39,21 @@ padding: 0px 20% 36px;
         ul{
             display: flex;
             flex-wrap: wrap;
-            width: 840px;
+            gap: 50px;
+            //width: 840px;
+            width: 700px;
             margin: 0 auto;
 
             li{
-                width: 33.33%;
+                width: 200px;
                 height: 300px;
-
-              
 
                 img{
                     border-radius: 15px;
                     width: 200px;
                     height: 200px;
                     margin-bottom: 12px;
+
                 }
                 h5{
                     font-size: 17px;
