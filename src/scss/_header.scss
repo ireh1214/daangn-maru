@@ -32,10 +32,17 @@ nav{
             font-weight: 600;
                 color:#4d5159;
                 cursor: pointer;
+                transition:  0.3s ease;
             
 
                 &:first-child{
                     margin-left: 32px;
+                }
+                &.on{
+                    color: $main;
+                }
+                &:hover{
+                    color: #999;
                 }
         }
     }
