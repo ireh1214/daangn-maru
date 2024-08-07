@@ -1,4 +1,12 @@
 import { Link } from "react-router-dom";
+import { FaApple } from "react-icons/fa";
+import { RiGooglePlayFill } from "react-icons/ri";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
+import { FaSquareGithub } from "react-icons/fa6";
+import { GrLanguage } from "react-icons/gr";
+import { SlArrowDown } from "react-icons/sl";
 
 export default function Footer() {
 	return (
@@ -9,7 +17,7 @@ export default function Footer() {
 						<Link to="/fleamarket">중고거래 </Link>
 					</li>
 					<li>
-						<Link to="/nearby-stores">동네업체 </Link>
+						<Link to="/nearbyStores">동네업체 </Link>
 					</li>
 					<li>
 						<Link to="/jobs">알바 </Link>
@@ -35,10 +43,10 @@ export default function Footer() {
 			<div className="box2">
 				<p>당근 앱 다운로드</p>
 				<button type="button" className="apple">
-					App Store
+					<FaApple size="20" /> App Store
 				</button>
 				<button type="button" className="google">
-					Google Play
+					<RiGooglePlayFill size="20" /> Google Play
 				</button>
 			</div>
 
@@ -47,10 +55,9 @@ export default function Footer() {
 					<div>
 						<p>
 							<span>
-								{" "}
 								<b>대표</b>김용현, 황도연
 							</span>
-							<span>
+							<span className="line">
 								<b>사업자번호</b> 123-45-67890
 							</span>
 						</p>
@@ -65,12 +72,10 @@ export default function Footer() {
 						</p>
 						<p>
 							<span>
-								{" "}
-								<b>전화</b> 1544-9796
+								<b>전화</b> 1111-9999
 							</span>
-							<span>
-								{" "}
-								<b>고객문의</b> cs@daangnservice.com{" "}
+							<span className="line">
+								<b>고객문의</b> hireh1214@gmail.com
 							</span>
 						</p>
 					</div>
@@ -94,13 +99,14 @@ export default function Footer() {
 
 				<div className="right">
 					<ul>
-						<li className="facebook" />
-						<li className="insta" />
-						<li className="ytb" />
-						<li className="blog" />
+						<FaFacebook size="22" color="868b94" />
+						<FaInstagram size="22" color="868b94" />
+						<FaYoutube size="22" color="868b94" />
+						{/* 깃허브 버튼은 반짝반짝 빛나서 시선 끌게 하기 */}
+						<FaSquareGithub size="22" color="868b94" />
 					</ul>
 					<div className="select">
-						<label htmlFor="lang" />
+						<GrLanguage size="14" color="868b94" />
 						<select id="lang">
 							<option value="kr" selected>
 								한국
@@ -108,6 +114,7 @@ export default function Footer() {
 							<option value="en">미국</option>
 							<option value="jp">일본</option>
 						</select>
+						<SlArrowDown size="14" color="868b94" />
 					</div>
 				</div>
 			</div>

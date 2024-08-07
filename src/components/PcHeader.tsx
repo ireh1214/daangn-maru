@@ -4,7 +4,11 @@ export default function PcHeader() {
 	return (
 		<header>
 			<nav>
-				<h1 className="logo">logo</h1>
+				<Link to="/">
+					{/* biome-ignore lint/a11y/useHeadingContent: <explanation> */}
+					<h1 className="logo" />
+				</Link>
+
 				<ul>
 					<li>
 						<Link to="/fleamarket">중고거래 </Link>

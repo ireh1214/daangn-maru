@@ -13,7 +13,10 @@ export default function MoHeader() {
 
 	return (
 		<header className="mo">
-			<h1 className="logo">logo</h1>
+			<Link to="/">
+				{/* biome-ignore lint/a11y/useHeadingContent: <explanation> */}
+				<h1 className="logo" />
+			</Link>
 			<IoSearchOutline size="24" color="#000" />
 			<RxHamburgerMenu
 				size="24"
