@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { IoSearchOutline } from "react-icons/io5";
-import { IoCloseOutline } from "react-icons/io5";
+import { IoSearchOutline, IoCloseOutline } from "react-icons/io5";
 
 export default function MoHeader() {
 	const [isNavVisible, setIsNavVisible] = useState(false);
