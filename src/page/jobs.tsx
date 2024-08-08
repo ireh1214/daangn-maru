@@ -14,6 +14,7 @@ export default function Jobs() {
 					<br />
 					동네 알바들 여기 다 있어요.
 				</p>
+				<button type="button">공고 올리기</button>
 			</section>
 		</Layout>
 	);

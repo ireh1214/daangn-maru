@@ -14,6 +14,7 @@ export default function Car() {
 					<br />
 					당근에서 직거래해보세요.
 				</p>
+				<button type="button">내 차 판매하기</button>
 			</section>
 		</Layout>
 	);

@@ -4,15 +4,12 @@
 main{
     border-bottom: 1px solid #eee;
 }
-
     .top_sec{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+@include flex_item_column;
+ align-items: flex-start;
         width: 100%;
         height: 320px;
-padding: 0px 20% 36px;
-
+        padding: 0 15vw;
 
         h2{
             font-size: 34px;
@@ -24,6 +21,16 @@ padding: 0px 20% 36px;
             font-size: 18px;
             font-weight: 300;
             line-height: 26px;
+        }
+
+        button{
+            background-color: $main;
+            margin-top: 22px;
+           padding: 8px 12px;
+           color:#fff;
+           border-radius: 4px;
+           font-size: 14px;
+           font-weight: 600;
         }
 
         &.fleamarket{
