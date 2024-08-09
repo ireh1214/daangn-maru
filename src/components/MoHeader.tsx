@@ -16,19 +16,14 @@ export default function MoHeader() {
 				{/* biome-ignore lint/a11y/useHeadingContent: <explanation> */}
 				<h1 className="logo" />
 			</Link>
-			<IoSearchOutline size="24" color="#000" />
-			<RxHamburgerMenu
-				size="24"
-				color="#000"
-				onClick={toggleNav}
-				style={{ display: isNavVisible ? "none" : "block" }}
-			/>
-			<IoCloseOutline
-				size="24"
-				color="#000"
-				onClick={toggleNav}
-				style={{ display: isNavVisible ? "block" : "none" }}
-			/>
+			<div>
+				<IoSearchOutline size="24" color="#000" />
+				{isNavVisible ? (
+					<IoCloseOutline size="24" color="#000" onClick={toggleNav} />
+				) : (
+					<RxHamburgerMenu size="24" color="#000" onClick={toggleNav} />
+				)}
+			</div>
 
 			<nav style={{ display: isNavVisible ? "block" : "none" }}>
 				<ul>
