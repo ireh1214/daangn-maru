@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { supabase } from "./supabaseClient";
+import { supabase } from "../supabaseClient";
 
 // 데이터 타입 정의
 interface Item {
@@ -11,7 +11,7 @@ interface Item {
 	price: number; // bigint는 number
 }
 
-export default function ItemBox() {
+export default function NearItem() {
 	const [items, setItems] = useState<Item[]>([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);

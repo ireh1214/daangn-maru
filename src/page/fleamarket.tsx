@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import ItemBox from "../supabase/ItemBox";
+import ItemBox from "../supabase/item/FleamarketItem";
 
 export default function Fleamarket() {
 	return (
