@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import CarItem from "../supabase/item/CarItem";
+import MiddleBox from "../components/MiddleBox";
 
 export default function Car() {
 	return (
@@ -20,13 +21,7 @@ export default function Car() {
 			<section className="main_sec car">
 				<h2>인기 중고차</h2>
 				<CarItem />
-				<div className="middle_box">
-					<p>
-						딜러 수수료 없는 중고차 직거래 <br />
-						당근에서 바로 찾아보세요!
-					</p>
-					<button type="button">앱 다운로드 하기</button>
-				</div>
+				<MiddleBox text1="딜러 수수료 없는 중고차 직거래" text2="당근에서 바로 찾아보세요!" btnText="앱 다운로드 하기" />
 				<CarItem />
 			</section>
 		</Layout>

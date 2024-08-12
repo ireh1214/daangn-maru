@@ -3,12 +3,13 @@ import { supabase } from "../supabaseClient";
 
 // 데이터 타입 정의
 interface Item {
-	id_: string; // uuid 타입은 string
+	id: number; // uuid 타입은 string
 	image_url: string;
 	title: string;
 	description: string;
 	location: string;
-	price: number; // bigint는 number
+	price: string;
+	name: string;
 }
 
 export default function JobsItem() {
@@ -19,7 +20,7 @@ export default function JobsItem() {
 	useEffect(() => {
 		const fetchItems = async () => {
 			const { data, error } = await supabase
-				.from("items") // 테이블 이름 입력
+				.from("items_j") // 테이블 이름 입력
 				.select("*"); // 모든 컬럼 선택
 
 			if (error) {
@@ -42,11 +43,13 @@ export default function JobsItem() {
 		<>
 			<ul>
 				{items.map((item) => (
-					<li key={item.id_}>
+					<li key={item.id}>
 						<img src={item.image_url} alt="" />
-						<h5>{item.title}</h5>
-						<p>{item.price} 원</p>
-						<p>{item.location}</p>
+						<div>
+							<h5>{item.title}</h5>
+							<p>{item.location}</p>
+							<p>{item.price}</p>
+						</div>
 					</li>
 				))}
 			</ul>

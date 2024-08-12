@@ -1,4 +1,6 @@
 import Layout from "../components/Layout";
+import RealtyItem from "../supabase/item/RealtyItem";
+import MiddleBox from "../components/MiddleBox";
 
 export default function Realty() {
 	return (
@@ -15,6 +17,16 @@ export default function Realty() {
 					편하게 거래해보세요.
 				</p>
 				<button type="button">매물 올리기</button>
+			</section>
+			<section className="main_sec realty">
+				<h2>인기 부동산 게시글</h2>
+				<RealtyItem />
+				<MiddleBox
+					text1="쉿! 동네 이웃만 알아요. 👀"
+					text2="숨은 부동산 매물, 당근에서 바로 찾아보세요!"
+					btnText="앱 다운로드 하기"
+				/>
+				<RealtyItem />
 			</section>
 		</Layout>
 	);
