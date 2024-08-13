@@ -18,8 +18,7 @@ div{
     margin: 0 auto;
     position: relative;
         overflow: hidden;
-         background-image: url("../assets/img/sub/fleamarket_hero.webp");
-         background-size: contain;
+               background-size: contain;
          background-repeat: no-repeat;
          background-position: top right;
 
@@ -48,18 +47,33 @@ div{
 
         &.fleamarket{
             background-color: #fff1aa;
+            div{
+        background-image: url("../assets/img/sub/fleamarket_hero.webp");
+            }
         }
         &.near{
             background-color: #f7f1eb;
+            div{
+                background-image: url("../assets/img/sub/nearby_stores_hero.png");
+            }
         }
         &.jobs{
            background-color:  #ffe2d2;
+           div{
+            background-image: url("../assets/img/sub/jobs_hero.png");
+           }
         }
         &.realty{
             background-color: #d2edfa;
+            div{
+                background-image: url("../assets/img/sub/realty_hero.png");
+            }
         }
         &.car{
             background-color: #c2effa;
+            div{
+                background-image: url("../assets/img/sub/car_hero.png");
+            }
         }
     }
 
