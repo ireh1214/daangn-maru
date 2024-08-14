@@ -1,373 +1,652 @@
-
-
-#root{
-main{
+//main home page
+#root {
+  main {
     border-bottom: 1px solid #eee;
-}
-    .top_sec{
-        width: 100%;
-        height: 320px;
-        padding: 0;
-div{
-    @include flex_item_column;
- align-items: flex-start;
-    width: calc(100% - 30vw);
-    max-width: 1200px;
-    min-width: 820px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-        overflow: hidden;
-               background-size: contain;
-         background-repeat: no-repeat;
-         background-position: top right;
+  }
 
-        h2{
-            font-size: 34px;
-            font-weight: 600;
-            line-height: 50px;
-            margin-bottom: 20px;
-        }
-        p{
-            font-size: 18px;
-            font-weight: 300;
-            line-height: 26px;
-        }
+  .home_wrap {
+    //   margin-top: 56px;
+    //공통 section start
+    & > section {
+      width: 100%;
+      height: 750px;
 
-        button{
-            background-color: $main;
-            margin-top: 22px;
-           padding: 8px 12px;
-           color:#fff;
-           border-radius: 4px;
-           font-size: 14px;
-           font-weight: 600;
-        }
-}
+      & > div {
+        width: 1080px;
+        height: 100%;
+        margin: 0 auto;
+      }
+      .sec_container {
+        width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
 
-        &.fleamarket{
-            background-color: #fff1aa;
-            div{
-        background-image: url("../assets/img/sub/fleamarket_hero.webp");
-            }
-        }
-        &.near{
-            background-color: #f7f1eb;
-            div{
-                background-image: url("../assets/img/sub/nearby_stores_hero.png");
-            }
-        }
-        &.jobs{
-           background-color:  #ffe2d2;
-           div{
-            background-image: url("../assets/img/sub/jobs_hero.png");
-           }
-        }
-        &.realty{
-            background-color: #d2edfa;
-            div{
-                background-image: url("../assets/img/sub/realty_hero.png");
-            }
-        }
-        &.car{
-            background-color: #c2effa;
-            div{
-                background-image: url("../assets/img/sub/car_hero.png");
-            }
-        }
-    }
+      .text_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+      }
 
-    .main_sec{
-        h2{
-            font-size: 32px;
-            font-weight: 600;
-            text-align: center;
-            margin: 64px 0 50px;
-        }
+      //공통 end
 
-        &.fleamarket{
-        ul{
+      &:nth-child(1) {
+        background-color: #fffae0;
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 48px;
+          background: url("../assets/img/main/main0-1.png");
+          background-repeat: no-repeat;
+          background-size: 600px;
+          background-position: right;
+
+          h2 {
+            font-size: 54px;
+            line-height: 70px;
+            font-weight: 700;
+          }
+
+          p {
+            color: #666;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 400;
+          }
+
+          div {
             display: flex;
-            flex-wrap: wrap;
-            gap: 50px;
-            //width: 840px;
-            width: 700px;
-            margin: 0 auto;
+            gap: 16px;
 
-            li{
-                width: 200px;
-                height: 300px;
-
-                img{
-                    border-radius: 15px;
-                    width: 200px;
-                    height: 200px;
-                    margin-bottom: 12px;
-
-                }
-                h5{
-                    font-size: 17px;
-                      font-weight: 300;
-                      margin-bottom: 4px;
-                     padding: 0px 4px;
-                }
-                p{
-                padding: 0px 4px;
-&:nth-child(3){
-    font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-&:nth-child(4){
-font-size: 14px;
-}
-                }
+            button {
+              padding: 16px 40px;
+              background-color: $main;
+              border-radius: 8px;
+              font-size: 18px;
+              color: #fff;
             }
+          }
         }
       }
 
-      //공통 ul
+      &:nth-child(2) {
+        background-color: #f9f9f9;
 
-    &.car, &.realty, &.jobs{
-width: 768px;
-margin: 64px auto 80px;
-
-        h2{
-            font-size: 26px;
-            font-weight: 600;
-            text-align: left;
-            margin: 64px 0 50px;
-        }  
-
-            ul{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 36px;
-            margin: 0 auto;
-            width: 100%;
-
-            li{
-                display: flex;
-                width: calc(50% - 18px);
-
-                img{
-                    border-radius: 8px;
-                    width: 108px;
-                    height: 108px;
-                    margin-right:16px;
-                }
-
-                div{
-                    display: flex;
-                    flex-direction: column;
-                    gap:12px;
-
-                    h5{
-                        font-size: 18.5px;
-                        line-height: 22px;
-                    }
-
-                    p{
-                        &:nth-child(2){
-                            color: #999;
-                            font-weight: 300;
-                            font-size: 14px;
-                        }
-                        &:nth-child(3){
-                            font-size: 17px;
-                            font-weight: 700;
-                        }
-                    }
-                }
-         
-            }
-        }
-    }
-
-     .middle_box{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #009ceb1a;
-            width: 100%;
-            border-radius: 4px;
-            padding: 28px 32px;
-            margin: 44px 0px 64px;
-            p{
-                font-size: 19px;
-                font-weight: 600;
-                line-height: 28px;
-            }
-
-            button{
-                background-color: $main;
-padding: 12px 10px;
-color: #fff;
-border-radius: 4px;
-font-size: 14px;
-            }
-        }
-
-    }
-}
-
-
-
-@media screen and (max-width:860px) {
-    #root{
-
-    .top_sec{
-margin-top: 56px;
-        width: 100%;
-        height: 320px;
-        padding: 0;
-div{
-    width: 100%;
-    min-width: 280px;
-    height: 100%;
-    padding: 0px 10px;
- 
-
-        h2{
-            font-size: 28px;
-            line-height: 38px;
-        }
-        p{
-            font-size: 16px;
-        }
-}
-
- &.fleamarket, &.near,&.jobs,&.realty,&.car{
-    div{
-        background-image: none !important;
-    }
- }
-    }
-
-    .main_sec{
-        padding: 0px 10px;
-        h2{
-            font-size: 28px;
-            font-weight: 600;
-            text-align: center;
-            margin: 64px 0 50px;
-        }
-
-        &.fleamarket{
-            width: 100%;
-            max-width: 510px;
-            margin: 0 auto;
-        ul{
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+        .sec_container {
+          .main_img1 {
+            width: 658px;
+            height: 750px;
+            background-image: url("../assets/img/main/main2.webp");
+            background-size: contain;
+          }
+          .text_box {
             gap: 20px;
-            //width: 840px;
-            width: 100%;
-            margin: 0 auto;
-
-            li{
-                width: 150px;
-                height: 240px;
-
-                img{
-                    width: 150px;
-                    height: 150px;
-                    margin-bottom: 12px;
-                }
-                h5{
-                    font-size: 15px;
-                      font-weight: 300;
-                      margin-bottom: 4px;
-                     padding: 0px 4px;
-                }
-                p{
-                padding: 0px 4px;
-&:nth-child(3){
-    font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-&:nth-child(4){
-font-size: 13px;
-}
-                }
+            p {
+              &:nth-child(1) {
+                color: $main;
+                font-weight: 700;
+              }
+              &:nth-child(3) {
+                font-size: 20px;
+                font-weight: 300;
+                color: #666;
+                line-height: 30px;
+              }
             }
+
+            em {
+              font-size: 48px;
+              line-height: 68px;
+              font-weight: 600;
+            }
+
+            div {
+              display: flex;
+              gap: 16px;
+              margin-top: 16px;
+
+              button {
+                padding: 16px 24px;
+                background-color: #e9ecef;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        background-color: #fff8f1;
+
+        .sec_container {
+          .main_img2 {
+            width: 656px;
+            height: 750px;
+            background-image: url("../assets/img/main/main3.webp");
+            background-size: contain;
+          }
+          .text_box {
+            gap: 20px;
+            p {
+              &:nth-child(1) {
+                color: $main;
+                font-weight: 700;
+              }
+              &:nth-child(3) {
+                font-size: 20px;
+                font-weight: 300;
+                color: #666;
+                line-height: 30px;
+              }
+            }
+
+            em {
+              font-size: 48px;
+              line-height: 68px;
+              font-weight: 600;
+            }
+
+            div {
+              ul {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 24px;
+
+                li {
+                  h6 {
+                    font-size: 15px;
+                    margin: 16px 0;
+                  }
+
+                  p {
+                    color: #7c7c7c;
+                    font-size: 13px;
+                    line-height: 20px;
+                  }
+                  &::before {
+                    content: "";
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                  }
+                  &:nth-child(1) {
+                    &::before {
+                      background-image: url("../assets/img/main/main_icon1.svg");
+                    }
+                  }
+                  &:nth-child(2) {
+                    &::before {
+                      background-image: url("../assets/img/main/main_icon2.svg");
+                    }
+                  }
+                  &:nth-child(3) {
+                    &::before {
+                      background-image: url("../assets/img/main/main_icon3.svg");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(4) {
+        background-color: #f9f9f9;
+           .sec_container {
+          .main_img3 {
+            width: 658px;
+            height: 750px;
+            background-image: url("../assets/img/main/main2.webp");
+            background-size: contain;
+          }
+          .text_box {
+            gap: 20px;
+            align-items: flex-start;
+            p {
+              &:nth-child(1) {
+                color: $main;
+                font-weight: 700;
+              }
+              &:nth-child(3) {
+                font-size: 20px;
+                font-weight: 300;
+                color: #666;
+                line-height: 30px;
+              }
+            }
+
+            em {
+              font-size: 48px;
+              line-height: 68px;
+              font-weight: 600;
+            }
+              button {
+                padding: 16px 24px;
+                background-color: #e9ecef;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: 700;
+              }
+            
+          }
+        }
+      }
+      &:nth-child(5) {
+        background-color: #f6fdec;
+             .sec_container {
+          .main_img4 {
+            width: 658px;
+            height: 750px;
+            background-image: url("../assets/img/main/main2.webp");
+            background-size: contain;
+          }
+          .text_box {
+            gap: 20px;
+            align-items: flex-start;
+            p {
+              &:nth-child(1) {
+                color: $main;
+                font-weight: 700;
+              }
+              &:nth-child(3) {
+                font-size: 20px;
+                font-weight: 300;
+                color: #666;
+                line-height: 30px;
+              }
+            }
+
+            em {
+              font-size: 48px;
+              line-height: 68px;
+              font-weight: 600;
+            }
+              button {
+                padding: 16px 24px;
+                background-color: #e9ecef;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: 700;
+              }
+            
+          }
+        }
+  
+    }
+    }
+  }
+}
+
+// sub page
+#root {
+  .top_sec {
+    width: 100%;
+    height: 320px;
+    padding: 0;
+    div {
+      @include flex_item_column;
+      align-items: flex-start;
+      width: calc(100% - 30vw);
+      max-width: 1200px;
+      min-width: 820px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background-size: contain;
+      background-position: top right;
+
+      h2 {
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 50px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+      }
+
+      button {
+        background-color: $main;
+        margin-top: 22px;
+        padding: 8px 12px;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+    &.fleamarket {
+      background-color: #fff1aa;
+      div {
+        background-image: url("../assets/img/sub/fleamarket_hero.webp");
+      }
+    }
+    &.near {
+      background-color: #f7f1eb;
+      div {
+        background-image: url("../assets/img/sub/nearby_stores_hero.png");
+      }
+    }
+    &.jobs {
+      background-color: #ffe2d2;
+      div {
+        background-image: url("../assets/img/sub/jobs_hero.png");
+      }
+    }
+    &.realty {
+      background-color: #d2edfa;
+      div {
+        background-image: url("../assets/img/sub/realty_hero.png");
+      }
+    }
+    &.car {
+      background-color: #c2effa;
+      div {
+        background-image: url("../assets/img/sub/car_hero.png");
+      }
+    }
+  }
+
+  .main_sec {
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      text-align: center;
+      margin: 64px 0 50px;
+    }
+
+    &.fleamarket {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        //width: 840px;
+        width: 700px;
+        margin: 0 auto;
+
+        li {
+          width: 200px;
+          height: 300px;
+
+          img {
+            border-radius: 15px;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 12px;
+          }
+          h5 {
+            font-size: 17px;
+            font-weight: 300;
+            margin-bottom: 4px;
+            padding: 0px 4px;
+          }
+          p {
+            padding: 0px 4px;
+            &:nth-child(3) {
+              font-size: 17px;
+              font-weight: 600;
+              margin-bottom: 8px;
+            }
+
+            &:nth-child(4) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    //공통 ul
+
+    &.car,
+    &.realty,
+    &.jobs {
+      width: 768px;
+      margin: 64px auto 80px;
+
+      h2 {
+        font-size: 26px;
+        font-weight: 600;
+        text-align: left;
+        margin: 64px 0 50px;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px;
+        margin: 0 auto;
+        width: 100%;
+
+        li {
+          display: flex;
+          width: calc(50% - 18px);
+
+          img {
+            border-radius: 8px;
+            width: 108px;
+            height: 108px;
+            margin-right: 16px;
+          }
+
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            h5 {
+              font-size: 18.5px;
+              line-height: 22px;
+            }
+
+            p {
+              &:nth-child(2) {
+                color: #999;
+                font-weight: 300;
+                font-size: 14px;
+              }
+              &:nth-child(3) {
+                font-size: 17px;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .middle_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #009ceb1a;
+      width: 100%;
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin: 44px 0px 64px;
+      p {
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 28px;
+      }
+
+      button {
+        background-color: $main;
+        padding: 12px 10px;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  #root {
+    .top_sec {
+      margin-top: 56px;
+      width: 100%;
+      height: 320px;
+      padding: 0;
+      div {
+        width: 100%;
+        min-width: 280px;
+        height: 100%;
+        padding: 0px 10px;
+
+        h2 {
+          font-size: 28px;
+          line-height: 38px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+
+      &.fleamarket,
+      &.near,
+      &.jobs,
+      &.realty,
+      &.car {
+        div {
+          background-image: none !important;
+        }
+      }
+    }
+
+    .main_sec {
+      padding: 0px 10px;
+      h2 {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        margin: 64px 0 50px;
+      }
+
+      &.fleamarket {
+        width: 100%;
+        max-width: 510px;
+        margin: 0 auto;
+        ul {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 20px;
+          //width: 840px;
+          width: 100%;
+          margin: 0 auto;
+
+          li {
+            width: 150px;
+            height: 240px;
+
+            img {
+              width: 150px;
+              height: 150px;
+              margin-bottom: 12px;
+            }
+            h5 {
+              font-size: 15px;
+              font-weight: 300;
+              margin-bottom: 4px;
+              padding: 0px 4px;
+            }
+            p {
+              padding: 0px 4px;
+              &:nth-child(3) {
+                font-size: 15px;
+                font-weight: 600;
+                margin-bottom: 6px;
+              }
+
+              &:nth-child(4) {
+                font-size: 13px;
+              }
+            }
+          }
         }
       }
 
       //공통 ul
 
-    &.car, &.realty, &.jobs{
-width: 100%;
-max-width: 780px;
-margin: 64px auto 80px;
+      &.car,
+      &.realty,
+      &.jobs {
+        width: 100%;
+        max-width: 780px;
+        margin: 64px auto 80px;
 
-        h2{
-            font-size: 24px;
-            font-weight: 600;
-            text-align: left;
-            margin: 64px 0 50px;
-        }  
-// Item
-            ul{
+        h2 {
+          font-size: 24px;
+          font-weight: 600;
+          text-align: left;
+          margin: 64px 0 50px;
+        }
+        // Item
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 18px;
+          margin: 0 auto;
+          width: 100%;
+          overflow-x: auto;
+
+          li {
             display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            margin: 0 auto;
-            width: 100%;
-            overflow-x: auto;
+            width: calc(50% - 9px);
+            min-width: 250px;
 
-            li{
-                display: flex;
-                width: calc(50% - 9px);
-                min-width: 250px;
-
-                @media screen and (max-width:538px) {
-                      min-width: 100%;
-                }
-
-                img{
-                    border-radius: 8px;
-                    width: 85px;
-                    height: 85px;
-                    margin-right:8px;
-                }
-
-                div{
-                    display: flex;
-                    flex-direction: column;
-                    gap:8px;
-
-                    h5{
-                        font-size: 15px;
-                        line-height: 18px;
-                    }
-
-                    p{
-                        &:nth-child(2){
-                            font-size: 13px;
-                        }
-                        &:nth-child(3){
-                            font-size: 15px;
-                        }
-                    }
-                }
-         
+            @media screen and (max-width: 538px) {
+              min-width: 100%;
             }
-        }
-    }
 
-     .middle_box{
-            p{
-                font-size: 16px;
-                line-height: 22px;
+            img {
+              border-radius: 8px;
+              width: 85px;
+              height: 85px;
+              margin-right: 8px;
             }
+
+            div {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+
+              h5 {
+                font-size: 15px;
+                line-height: 18px;
+              }
+
+              p {
+                &:nth-child(2) {
+                  font-size: 13px;
+                }
+                &:nth-child(3) {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
         }
+      }
 
+      .middle_box {
+        p {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
     }
-}
-
+  }
 }

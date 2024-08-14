@@ -176,8 +176,6 @@ input {
     display: none;
   }
 
- 
-
   &[type="number"]::-webkit-outer-spin-button,
   &[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -204,10 +202,11 @@ body {
     -ms-overflow-style: none; /* 인터넷 익스플로러 */
     scrollbar-width: none; /* 파이어폭스 */
   }
-    font-family: Pretendard;
-    box-sizing: border-box;
+  font-family: Pretendard;
+  box-sizing: border-box;
   transition: 0.4s ease-in-out;
   font-size: 16px;
+  background-repeat: no-repeat;
 }
 
 img {
@@ -221,6 +220,6 @@ body {
 }
 
 ::selection {
-    color: #212529;
-    background: #FFB98B;
+  color: #212529;
+  background: #ffb98b;
 }
