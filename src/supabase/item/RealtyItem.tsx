@@ -6,7 +6,7 @@ interface Item {
 	id: string; 
 	image_url: string;
 	title: string;
-	description: string;
+	descrption: string;
 	location: string;
 	price: number; 
 }

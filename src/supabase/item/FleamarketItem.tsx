@@ -6,7 +6,7 @@ interface Item {
 	id_: string; // uuid 타입은 string
 	image_url: string;
 	title: string;
-	description: string;
+	descrption: string;
 	location: string;
 	price: number; // bigint는 number
 }

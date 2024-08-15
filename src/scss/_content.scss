@@ -199,7 +199,7 @@
       }
       &:nth-child(4) {
         background-color: #f9f9f9;
-           .sec_container {
+        .sec_container {
           .main_img3 {
             width: 658px;
             height: 750px;
@@ -227,20 +227,19 @@
               line-height: 68px;
               font-weight: 600;
             }
-              button {
-                padding: 16px 24px;
-                background-color: #e9ecef;
-                border-radius: 8px;
-                font-size: 18px;
-                font-weight: 700;
-              }
-            
+            button {
+              padding: 16px 24px;
+              background-color: #e9ecef;
+              border-radius: 8px;
+              font-size: 18px;
+              font-weight: 700;
+            }
           }
         }
       }
       &:nth-child(5) {
         background-color: #f6fdec;
-             .sec_container {
+        .sec_container {
           .main_img4 {
             width: 658px;
             height: 750px;
@@ -268,18 +267,16 @@
               line-height: 68px;
               font-weight: 600;
             }
-              button {
-                padding: 16px 24px;
-                background-color: #e9ecef;
-                border-radius: 8px;
-                font-size: 18px;
-                font-weight: 700;
-              }
-            
+            button {
+              padding: 16px 24px;
+              background-color: #e9ecef;
+              border-radius: 8px;
+              font-size: 18px;
+              font-weight: 700;
+            }
           }
         }
-  
-    }
+      }
     }
   }
 }
@@ -336,12 +333,16 @@
       background-color: #f7f1eb;
       div {
         background-image: url("../assets/img/sub/nearby_stores_hero.png");
+        background-size: 480px;
+        background-position: bottom right;
       }
     }
     &.jobs {
       background-color: #ffe2d2;
       div {
         background-image: url("../assets/img/sub/jobs_hero.png");
+        background-size: 620px;
+        background-position: bottom right;
       }
     }
     &.realty {
@@ -407,7 +408,84 @@
       }
     }
 
-    //공통 ul
+    &.near {
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+
+      .hash_box {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        button {
+          padding: 10px 24px;
+          border: 1px solid #eee;
+          border-radius: 20px;
+          font-size: 14px;
+
+          &:active {
+            background-color: #4d5159;
+            border: none;
+            color: #fff;
+          }
+        }
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+        margin: 0 auto;
+
+        li {
+          display: flex;
+          width: calc(50% - 10px);
+          padding-bottom: 40px;
+          border-bottom: 1px solid #eee;
+
+          img {
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            margin-right: 16px;
+          }
+          & > div {
+            h5 {
+              width: 100%;
+              margin-bottom: 6px;
+              span {
+                &:nth-child(1) {
+                  font-weight: 600;
+                  font-size: 18px;
+                }
+                &:nth-child(2) {
+                  color: #999;
+                  font-weight: 300;
+                  font-size: 14px;
+                }
+              }
+            }
+            p {
+              &:nth-child(2) {
+                font-weight: 300;
+                line-height: 20px;
+                @include ellipsis_l4($wlc: 2);
+                margin-bottom: 8px;
+              }
+              &:nth-child(3) {
+                color: #999;
+                font-weight: 300;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
 
     &.car,
     &.realty,
@@ -578,8 +656,6 @@
         }
       }
 
-      //공통 ul
-
       &.car,
       &.realty,
       &.jobs {
@@ -645,6 +721,40 @@
         p {
           font-size: 16px;
           line-height: 22px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 630px) {
+  #root {
+    .main_sec {
+      &.near {
+        ul {
+          padding: 0px 16px;
+          li {
+            width: 100%;
+            img {
+              width: 70px;
+              height: 70px;
+              border-radius: 100%;
+              margin-right: 16px;
+            }
+            & > div {
+              h5 {
+                span {
+                  &:nth-child(1) {
+                    font-size: 16px;
+                  }
+                }
+              }
+              p {
+                &:nth-child(2) {
+                  @include ellipsis_l4($wlc: 1);
+                }
+              }
+            }
+          }
         }
       }
     }

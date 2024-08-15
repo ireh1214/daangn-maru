@@ -7,7 +7,7 @@ interface Item {
 	id: number;
 	image_url: string;
 	title: string;
-	description: string;
+	descrption: string;
 	since: string;
 	price: string;
 }
