@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
+import Loading from "../../components/Loading";
 
-// 데이터 타입 정의
 interface Item {
-  id_: number; // uuid 타입은 string
+  id_: number;
   image_url: string;
   title: string;
   descrption: string;
   location: string;
-  s_title: string; // bigint는 number
+  s_title: string; 
 }
 
 export default function NearItem() {
@@ -35,7 +35,7 @@ export default function NearItem() {
     fetchItems();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loading />;
   if (error) return <div>Error: {error}</div>;
 
   return (

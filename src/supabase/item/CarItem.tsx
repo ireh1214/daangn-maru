@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
+import Loading from "../../components/Loading"
 
 // 데이터 타입 정의
 // uuid 타입은 string, bigint는 number
@@ -36,7 +37,7 @@ export default function CarItem() {
 		fetchItems();
 	}, []);
 
-	if (loading) return <div>Loading...</div>;
+	if (loading) return <Loading />;
 	if (error) return <div>Error: {error}</div>;
 
 	return (
