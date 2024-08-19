@@ -28,7 +28,7 @@ export default function MoHeader() {
 			<nav style={{ display: isNavVisible ? "block" : "none" }}>
 				<ul>
 					<li>
-						<Link to="/fleamarket">중고거래 </Link>
+					
 					</li>
 					<li>
 						<Link to="/nearbyStores">동네업체 </Link>
