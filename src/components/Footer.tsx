@@ -11,7 +11,7 @@ export default function Footer() {
 			<div className="box1">
 				<ul>
 					<li>
-						
+						<Link to="/fleamarket">중고거래 </Link>
 					</li>
 					<li>
 						<Link to="/nearbyStores">동네업체 </Link>

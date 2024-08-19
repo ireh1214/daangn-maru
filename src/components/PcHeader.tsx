@@ -16,7 +16,9 @@ export default function PcHeader() {
 				</Link>
 
 				<ul>
-		
+					<li className={getClass("/fleamarket")}>
+						<Link to="/fleamarket">중고거래 </Link>
+					</li>
 					<li className={getClass("/nearbyStores")}>
 						<Link to="/nearbyStores">동네업체 </Link>
 					</li>
