@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import ItemBox from "../supabase/item/FleamarketItem";
+import FleamarketItem from "../supabase/item/FleamarketItem";
 
 export default function Fleamarket() {
   return (
@@ -20,7 +20,7 @@ export default function Fleamarket() {
       </section>
       <section className="main_sec fleamarket">
         <h2>중고거래 인기매물</h2>
-        <ItemBox />
+        <FleamarketItem />
       </section>
     </Layout>
   );
