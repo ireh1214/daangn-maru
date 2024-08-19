@@ -14,7 +14,10 @@
     //240819 수정
     "allowJs": true,
     "skipLibCheck": true,
-
+    "baseUrl": "src",
+    "paths": {
+      "*": ["*"]
+    },
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
