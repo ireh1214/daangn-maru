@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import "./scss/common.scss";
 
-import Home from "./page/Home";
-import Fleamarket from "./page/Fleamarket";
-import NearbyStores from "./page/NearbyStores";
-import Jobs from "./page/Jobs";
-import Realty from "./page/Realty";
-import Car from "./page/Car";
+import Home from "./views/Home";
+import Fleamarket from "./views/Fleamarket";
+import NearbyStores from "./views/NearbyStores";
+import Jobs from "./views/Jobs";
+import Realty from "./views/Realty";
+import Car from "./views/Car";
 
 function App() {
   return (
