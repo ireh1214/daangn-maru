@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 
-const SUPABASE_URL = "https://cpeizpckhxkbfowgkplg.supabase.co";
+const SUPABASE_URL = "https://qwuexydxpyoevbsazgjs.supabase.co";
 // biome-ignore lint/style/noNonNullAssertion: <explanation>
 const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_KEY!;
 
